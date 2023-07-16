@@ -1,4 +1,4 @@
-package com.instagrocer.tastyGreens.security;
+package com.instagrocer.tastyGreens.Security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
