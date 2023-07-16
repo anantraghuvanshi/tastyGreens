@@ -3,6 +3,7 @@ package com.instagrocer.tastyGreens.Service;
 import com.instagrocer.tastyGreens.Entity.Item;
 import com.instagrocer.tastyGreens.Repository.ItemRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ItemService {
@@ -26,6 +27,14 @@ public class ItemService {
             itemRepository.save(item);
         }
     }
+    public List<Item> getAllItems() {
+        List<Item> items = new ArrayList<>();
+        for (Item item : itemRepository.findAll()) {
+            items.add(item);
+        }
+        return items;
+    }
+
     public void addItem(Item item) {
         itemRepository.save(item);
     }

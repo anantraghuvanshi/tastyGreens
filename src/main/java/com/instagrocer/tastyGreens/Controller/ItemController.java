@@ -21,6 +21,12 @@ public class ItemController {
     public List<Item> getCatalogItemsByType(@PathVariable String type) {
         return itemService.getCatalogItemsByType(type);
     }
+    @GetMapping("/admin/items")
+    @PreAuthorize("hasRole('ADMIN')")
+    public List<Item> getAllItems() {
+        return itemService.getAllItems();
+    }
+
 
     @PostMapping("/order")
     public void placeOrder(@RequestBody List<Item> items) {
@@ -31,7 +37,6 @@ public class ItemController {
     public void addItem(@RequestBody Item item) {
         itemService.addItem(item);
     }
-
     @DeleteMapping("/admin/item/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     public void deleteItem(@PathVariable Long id) {
