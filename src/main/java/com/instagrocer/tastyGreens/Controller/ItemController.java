@@ -26,8 +26,6 @@ public class ItemController {
     public List<Item> getAllItems() {
         return itemService.getAllItems();
     }
-
-
     @PostMapping("/order")
     public void placeOrder(@RequestBody List<Item> items) {
         itemService.placeOrder(items);

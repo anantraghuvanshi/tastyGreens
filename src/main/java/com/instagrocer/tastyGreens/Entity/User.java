@@ -1,12 +1,14 @@
 package com.instagrocer.tastyGreens.Entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 import java.util.Set;
 
 @Entity
 public class User {
 
+    @Id
     private Long id;
     private String userName;
     private String password;
