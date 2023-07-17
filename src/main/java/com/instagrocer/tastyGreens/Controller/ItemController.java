@@ -1,7 +1,9 @@
 package com.instagrocer.tastyGreens.Controller;
 
 import com.instagrocer.tastyGreens.Entity.Item;
+import com.instagrocer.tastyGreens.Entity.User;
 import com.instagrocer.tastyGreens.Service.ItemService;
+import com.instagrocer.tastyGreens.Service.UserService.UserService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -46,5 +48,4 @@ public class ItemController {
     public void updateItem(@PathVariable Long id, @RequestBody Item item) {
         itemService.updateItem(id, item);
     }
-
 }

@@ -2,10 +2,12 @@ package com.instagrocer.tastyGreens.Service;
 
 import com.instagrocer.tastyGreens.Entity.Item;
 import com.instagrocer.tastyGreens.Repository.ItemRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ItemService {
 
     private final ItemRepository itemRepository;
