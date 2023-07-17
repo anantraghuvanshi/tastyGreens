@@ -5,10 +5,12 @@ import com.instagrocer.tastyGreens.Entity.User;
 import com.instagrocer.tastyGreens.Repository.AdminRepository;
 import com.instagrocer.tastyGreens.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
 public class AdminService {
 
     @Autowired

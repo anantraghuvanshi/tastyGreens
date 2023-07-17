@@ -2,11 +2,14 @@ package com.instagrocer.tastyGreens.Controller;
 
 import com.instagrocer.tastyGreens.Entity.User;
 import com.instagrocer.tastyGreens.Service.UserService.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+@RestController
 public class UserController {
 
+    @Autowired
     private UserService userService;
 
     @PostMapping("/admin/user")

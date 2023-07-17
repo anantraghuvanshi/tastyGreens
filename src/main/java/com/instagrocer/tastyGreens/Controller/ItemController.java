@@ -4,13 +4,16 @@ import com.instagrocer.tastyGreens.Entity.Item;
 import com.instagrocer.tastyGreens.Entity.User;
 import com.instagrocer.tastyGreens.Service.ItemService;
 import com.instagrocer.tastyGreens.Service.UserService.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 public class ItemController {
 
+    @Autowired
     private ItemService itemService;
     public ItemController(ItemService itemService) {
         this.itemService = itemService;
